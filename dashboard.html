@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <div class="logo">
+    <span class="logo-icon">◆</span>
+    <span class="logo-text">CAPMINDS</span>
+  </div>
+
+ <ul class="menu">
+
+  <!-- Calendar -->
+  <li onclick="location.href='index.html'" class="active">
+    <span class="icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"/>
+      </svg>
+    </span>
+    <span>Calendar</span>
+  </li>
+
+  <!-- Dashboard -->
+  <li onclick="location.href='dashboard.html'">
+    <span class="icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-8h8V3h-8v10z"/>
+      </svg>
+    </span>
+    <span>Dashboard</span>
+  </li>
+
+</ul>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <div class="topbar">
+    <button onclick="location.href='index.html'" class="primary-btn">+ Book Appointment</button>
+  </div>
+
+  <div class="card">
+
+    <h2>Practice Dashboard</h2>
+
+    <!-- Filters Row -->
+   <div class="filters">
+
+  <!-- Patient Search -->
+  <div class="input-icon">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+    </svg>
+    <input id="searchPatient" placeholder="Patient Search">
+  </div>
+
+  <!-- Doctor Search -->
+  <div class="input-icon">
+    <svg viewBox="0 0 24 24">
+      <path d="M10 2a8 8 0 105.293 14.293l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+    </svg>
+    <input id="searchDoctor" placeholder="Doctor Search">
+  </div>
+
+  <!-- From Date -->
+  <div class="input-icon">
+    <svg viewBox="0 0 24 24">
+      <path d="M7 2v2H5a2 2 0 00-2 2v2h18V6a2 2 0 00-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 002 2h14a2 2 0 002-2V10z"/>
+    </svg>
+    <input type="date" id="fromDate">
+  </div>
+
+  <!-- To Date -->
+  <div class="input-icon">
+    <svg viewBox="0 0 24 24">
+      <path d="M7 2v2H5a2 2 0 00-2 2v2h18V6a2 2 0 00-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 002 2h14a2 2 0 002-2V10z"/>
+    </svg>
+    <input type="date" id="toDate">
+  </div>
+
+  <button class="update-btn" onclick="applyFilter()">Update</button>
+
+</div>
+
+    <!-- Table -->
+    <div class="table-card">
+
+      <div class="table-title">Appointment Details</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Hospital</th>
+            <th>Specialty</th>
+            <th>Select Date</th>
+            <th>Select Time</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

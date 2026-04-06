@@ -1,0 +1,331 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f9;
+}
+
+.sidebar {
+  width: 240px;
+  background: #1e293b;
+  color: #cbd5e1;
+  height: 100vh;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-icon {
+  color: #ef4444;
+  font-size: 18px;
+}
+
+.logo-text {
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Icon */
+.icon {
+  font-size: 18px;
+}
+
+/* Hover */
+.menu li:hover {
+  background: #334155;
+  color: white;
+}
+
+/* Active */
+.menu li.active {
+  background: #2563eb;
+  color: white;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Top Button */
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+/* Calendar Container */
+.calendar-container {
+  background: white;
+  border: 1px solid #ddd;
+}
+
+/* Top */
+.calendar-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background: #f9fafb;
+}
+
+.calendar-top button {
+  border: 1px solid #ccc;
+  background: white;
+  padding: 5px 10px;
+}
+
+/* Week Header */
+.week-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #f3f4f6;
+}
+
+.week-header div {
+  padding: 10px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+}
+
+/* Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+/* Day Cell */
+.day {
+  height: 100px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+
+.day-number {
+  font-size: 13px;
+}
+
+/* Event */
+.event {
+  background: #22c55e;
+  color: white;
+  font-size: 11px;
+  margin-top: 5px;
+  padding: 2px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.modal-box {
+  background: white;
+  width: 450px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+textarea {
+  grid-column: span 2;
+}
+
+.modal-actions {
+  grid-column: span 2;
+  text-align: right;
+}
+
+
+/* Dashboard Filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.filters input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.update-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* Table Card */
+.table-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Title */
+.table-title {
+  padding: 10px;
+  background: #f3f4f6;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+thead {
+  background: #f9fafb;
+}
+
+th {
+  text-align: left;
+  padding: 10px;
+  font-size: 13px;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Links (Blue like Figma) */
+.link {
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* Action Icons */
+.action-btn {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.edit {
+  color: #2563eb;
+}
+
+.delete {
+  color: red;
+}
+
+
+/* Input with icon */
+.input-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: white;
+}
+
+.input-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #6b7280;
+  margin-right: 6px;
+}
+
+.input-icon input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Filters layout */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Action buttons */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 6px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+/* SVG size */
+.action-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Edit */
+.edit svg {
+  fill: #2563eb;
+}
+
+/* Delete */
+.delete svg {
+  fill: #ef4444;
+}
+
+/* Hover effects */
+.edit:hover {
+  background: #dbeafe;
+}
+
+.delete:hover {
+  background: #fee2e2;
+}

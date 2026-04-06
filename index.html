@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+  <div class="logo">
+    <span class="logo-icon">◆</span>
+    <span class="logo-text">CAPMINDS</span>
+  </div>
+<ul class="menu">
+
+  <!-- Calendar -->
+  <li onclick="location.href='index.html'" class="active">
+    <span class="icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10z"/>
+      </svg>
+    </span>
+    <span>Calendar</span>
+  </li>
+
+  <!-- Dashboard -->
+  <li onclick="location.href='dashboard.html'">
+    <span class="icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M3 13h8V3H3v10zm10 8h8v-6h-8v6zM3 21h8v-6H3v6zm10-8h8V3h-8v10z"/>
+      </svg>
+    </span>
+    <span>Dashboard</span>
+  </li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <div class="topbar">
+    <button id="openModal" class="primary-btn">+ Book Appointment</button>
+  </div>
+
+  <!-- Calendar -->
+  <div class="calendar-container">
+
+    <div class="calendar-top">
+      <div>
+        <button onclick="prevMonth()">❮</button>
+        <span id="monthYear"></span>
+        <button onclick="nextMonth()">❯</button>
+      </div>
+
+      <div>
+        <button>Today</button>
+        <button>Month</button>
+      </div>
+    </div>
+
+    <div class="week-header">
+      <div>Sunday</div>
+      <div>Monday</div>
+      <div>Tuesday</div>
+      <div>Wednesday</div>
+      <div>Thursday</div>
+      <div>Friday</div>
+      <div>Saturday</div>
+    </div>
+
+    <div id="calendarGrid" class="calendar-grid"></div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <h3>Schedule Appointment</h3>
+      <span id="closeModal">✖</span>
+    </div>
+
+    <form id="form" class="form-grid">
+      <input id="patient" placeholder="Patient Name" required>
+      <input id="doctor" placeholder="Doctor Name" required>
+      <input id="hospital" placeholder="Hospital Name" required>
+      <input id="specialty" placeholder="Specialty" required>
+      <input type="date" id="date" required>
+      <input type="time" id="time" required>
+      <textarea id="reason" placeholder="Reason"></textarea>
+
+      <div class="modal-actions">
+        <button type="button" id="closeModal2">Cancel</button>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+<script src="js/modal.js"></script>
+<script src="js/app.js"></script>
+<script src="js/calendar.js"></script>
+
+</body>
+</html>
